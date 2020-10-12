@@ -1,5 +1,4 @@
 const express = require('express');
-const sqlite3 = require('sqlite3');
 const boyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const methodOverride = require('method-override');
