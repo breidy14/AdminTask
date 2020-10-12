@@ -24,7 +24,7 @@ let sessionConfig = {
     saveUninitialized: false,
     resave: false
 }
-//confogurando la sessiones para produccion
+//configurando la sessiones para produccion
 if(process.env.NODE_ENV && process.env.NODE_ENV == 'production'){
     sessionConfig['store'] = new (require('connect-pg-simple')(session))();
 }
