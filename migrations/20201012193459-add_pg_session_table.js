@@ -5,7 +5,7 @@ module.exports = {
     return queryInterface.createTable('session', {
       sid: {
         type: Sequelize.STRING,
-        primaryKey: tru
+        primaryKey: true
       },
       sess: {
         type: Sequelize.JSON
