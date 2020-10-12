@@ -41,7 +41,7 @@ app.get('/home',function(req,res){
 // POST http://localhost:3000/tasks/3?_method=PUT
 // Asi se sustituye una petición POST, por una PUT||PATH||DELETE, ya que los navegadores solo trabajan con POST y GET usando el method-override
 
-let server = app.listen(3000);
+let server = app.listen(process.env.PORT || 3000);
 let io = socketio(server);
 let sockets = {};
 let usersCount = 0;
