@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title Tareas
+    body
+        table
+            each task in tasks
+                tr
+                    th Desc
+                    td=task.description
+                    td: a(href=`/tasks/${task.id}`) Eliminar
+        br
+        ul
+            each task in tasks
+                li= task.description
+                li: a(href=`/tasks/${task.id}`) Show

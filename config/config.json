@@ -1,0 +1,26 @@
+{
+	"development": {
+    "username": "root",
+    "password": "1234",
+    "database": "proyectoBackend",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+	},
+	"test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+	},
+	"production": {
+    "username": "szztjubmtesawq",
+    "password": "06227f7b660718c7f0b9a01ebaca988a778386476770dbed355589015c975e2a",
+    "database": "dejs2dc2bg9ot5",
+    "host": "ec2-54-172-173-58.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "operatorsAliases": false
+	}
+}

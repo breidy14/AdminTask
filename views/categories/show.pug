@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+    title Categorías
+    body
+    h1= category.title
+    ul
+        each task in category.tasks 
+            li=task.description
+    form(action=`/categories/${category.id}?_method=DELETE` method="POST")
+        input(type="submit" value="Eliminar")

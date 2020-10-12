@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title Tareas
+    body
+        form(action=`/tasks/${task.id}?_method=PUT` method="POST")
+            textarea(name="description" placeholder="Coloca aquí el pendiente a realizar")=task.description
+            br
+            each category in categories
+                input(type="checkbox", name="checkCate" value=category.id)
+                label(for="name" name="title")= category.title
+                br
+            input(type="submit" value="Guardar")
