@@ -19,11 +19,17 @@ app.use(boyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.set('view engine', 'pug');
 
-app.use(session({
+let sessionConfig = {
     secret:['1234asdfre','12345qwerty'],
     saveUninitialized: false,
     resave: false
-}));
+}
+//confogurando la sessiones para produccion
+if(process.env.NODE_ENV && process.env.NODE_ENV == 'production'){
+    sessionConfig['store'] = new (require('connect-pg-simple')(session))();
+}
+
+app.use(session(sessionConfig));
 //Los middleware se ejecutan en el orden que los pones en el archivo de conf en este caso 1ro va el de sessions y luego findUserMiddleware
 app.use(findUserMiddleware);
 app.use(authUser);
