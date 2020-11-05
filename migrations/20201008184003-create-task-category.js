@@ -13,8 +13,8 @@
             references:{
             model:{tableName: 'Tasks'},
             key: 'id',
-            onDelete: 'cascade',
-            onUpdate: 'cascade'
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE'
             }
         },
         categoryId: {
@@ -22,8 +22,8 @@
             references:{
             model:{tableName: 'Categories'},
             key: 'id',
-            onDelete: 'cascade',
-            onUpdate: 'cascade'
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE'
             }
         },
         createdAt: {
